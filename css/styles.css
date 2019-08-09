@@ -1,0 +1,117 @@
+/*
+#d1d2d4 灰
+#ffd504 黄
+#c10073 粉
+*/
+
+body{
+	width:50vw;
+	height: 100vh;
+	margin: 0 auto;
+	background-color: #d1d2d4;
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+.mainDesign{
+	width: 100%;
+	height: 60%;
+	display: block;
+	position: relative;
+}
+
+
+.cubePink{
+	width: 66%;
+	height: 66vmin;
+	background-color: #c10073;
+	float:right;
+	position: absolute;
+	margin-left: 34%;
+	mix-blend-mode: overlay;
+	animation-name: toYellow;
+  	animation-duration: 3s;
+  	animation-direction: alternate-reverse;
+  	animation-iteration-count: infinite;
+
+  }
+ 
+    @keyframes toYellow {
+  	from {background-color: #c10073;}
+  	to {background-color:#ffd504;}
+
+}
+
+.cubeYellow{
+	width: 66%;
+	height: 66vmin;
+	background-color: #ffd504;
+	position: absolute;
+	margin-top: 34vmin;
+	mix-blend-mode: overlay;
+	animation-name: toPink;
+  	animation-duration: 4s;
+  	animation-delay: 0.2s;
+  	animation-direction: alternate-reverse;
+  	animation-iteration-count: infinite;
+
+  }
+ 
+    @keyframes toPink {
+  	from {background-color: #ffd504;top: 0px;left: 0px;}
+  	to {background-color:#c10073;top:10px;left:10px;}
+}
+
+
+.title{
+/*	position: relative;*/
+	margin-top: 41vmin;
+}
+
+.title p{
+	margin-left: 3%;
+/*	margin-top: 5%;*/
+	color: #000000;
+	font-size: 13vmin;
+	font-weight: bolder;
+	/*font-stretch: expanded;*/
+	animation-name: toWhite;
+  	animation-duration: 2s;
+  	animation-delay: 0.2s;
+  	animation-direction: alternate-reverse;
+  	animation-iteration-count: infinite;
+}
+
+	@keyframes toWhite {
+		from {color:#000000;}
+  		to {color:white;}
+	}
+
+.footer{
+	display: flex;
+	height: 20%;
+}
+
+.footer-box{
+	height: 100%;
+	width: 33%;
+	padding-left:3%;
+	display: flex;
+	position: relative;
+/*	justify-content: space-around; */
+
+}
+
+.footer-box p{
+	font-size: 2.5vh;
+	font-weight: bold;
+	animation-name: toWhite;
+  	animation-duration: 2s;
+  	animation-delay: 0.2s;
+  	animation-direction: alternate-reverse;
+  	animation-iteration-count: infinite;
+}
+
+	@keyframes toWhite {
+		from {color:#000000;}
+  		to {color:white;}
+}
